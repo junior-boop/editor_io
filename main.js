@@ -62,4 +62,4 @@ const initial_data = () => {
 
 setTimeout(()=>{
   initial_data()
-}, 500)
+}, 1000)
