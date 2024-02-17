@@ -19,12 +19,6 @@ const initial_data = () => {
   window.addEventListener('load', () => {
     const data = document.querySelector('#data')
 
-  //   if (window.ReactNativeWebView.injectedObjectJson()) {
-  //     const customValue = window.ReactNativeWebView.injectedObjectJson();
-  //     alert(customValue)
-
-  // }
-
     const editorjs = new Editor({
       placeholder : 'Entrer votre texte',
       holder : app,
