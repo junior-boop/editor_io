@@ -14,41 +14,50 @@ const app = document.querySelector('#app')
 
 const initial_data = () => {
   const data = document.querySelector('#data')
-  return JSON.parse(data.textContent.trim())
- }
 
-const editorjs = new Editor({
-  placeholder : 'Entrer votre texte',
-  holder : app,
-  tools : {
-    bible_ref : {
-      class : bible_ref,
-      inlineToolbar: ['link', 'marker', 'bold', 'italic'],
-    },
-    titre : titre,
-    quote_review : quote_review ,
-    image : image,
-    heading : {
-      class : heading,
-      config : {
-        placeholder: 'Enter a header',
-        levels: [2, 3],
-        defaultLevel: 3
-      }
-    },
-    link : Link,
-    marker : marker,
-    delimiter : delimiter,
-    underline : underline, 
+  data.addEventListener('change', () => {
+    console.log(data.value)
+
+    const editorjs = new Editor({
+      placeholder : 'Entrer votre texte',
+      holder : app,
+      tools : {
+        bible_ref : {
+          class : bible_ref,
+          inlineToolbar: ['link', 'marker', 'bold', 'italic'],
+        },
+        titre : titre,
+        quote_review : quote_review ,
+        image : image,
+        heading : {
+          class : heading,
+          config : {
+            placeholder: 'Enter a header',
+            levels: [2, 3],
+            defaultLevel: 3
+          }
+        },
+        link : Link,
+        marker : marker,
+        delimiter : delimiter,
+        underline : underline, 
+        
+        
+      },
     
     
-  },
+      onChange: async (api, event) => {
+        const output = document.getElementById('output');
+        output.innerHTML = JSON.stringify(await api.saver.save())
+      },
+    
+      data : JSON.parse(data.value)
+    })
+    
+
+  })
 
 
-  onChange: async (api, event) => {
-    const output = document.getElementById('output');
-    output.innerHTML = JSON.stringify(await api.saver.save())
-  },
+}
 
-  data : initial_data()
-})
+initial_data()
