@@ -12,11 +12,13 @@ import Link from './link/link.mjs'
 
 const app = document.querySelector('#app')
 
+
+
 const initial_data = () => {
   const data = document.querySelector('#data')
-
-  data.addEventListener('change', () => {
-
+  
+  window.addEventListener('load', () => {
+    alert('je fonctionne')
     const editorjs = new Editor({
       placeholder : 'Entrer votre texte',
       holder : app,
