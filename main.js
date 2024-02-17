@@ -17,7 +17,11 @@ const app = document.querySelector('#app')
 const initial_data = () => {
   
   window.addEventListener('load', () => {
-    const data = document.querySelector('#data')
+    
+    const data_i = () => {
+      const data = document.querySelector('#data')
+      return JSON.parse(data)
+    }
 
     const editorjs = new Editor({
       placeholder : 'Entrer votre texte',
@@ -52,7 +56,7 @@ const initial_data = () => {
         output.innerHTML = JSON.stringify(await api.saver.save())
       },
     
-      data : JSON.parse(data.value)
+      data : data_i()
     })
     
 
