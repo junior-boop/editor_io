@@ -27,6 +27,7 @@ const editorjs = new Editor({
     },
     titre : titre,
     quote_review : quote_review ,
+    image : image,
     heading : {
       class : heading,
       config : {
@@ -35,7 +36,7 @@ const editorjs = new Editor({
         defaultLevel: 3
       }
     },
-    image : image,
+    link : Link,
     marker : marker,
     delimiter : delimiter,
     underline : underline, 
