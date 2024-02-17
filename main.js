@@ -15,8 +15,12 @@ const app = document.querySelector('#app')
 
 
 const initial_data = () => {
-  
-  window.addEventListener('load', () => {
+
+  const data_i = () => {
+    alert('je fonctionne')
+    const data = document.querySelector('#data')
+    return JSON.parse(data.value)
+  }
 
     const editorjs = new Editor({
       placeholder : 'Entrer votre texte',
@@ -53,16 +57,11 @@ const initial_data = () => {
     
       data : data_i()
     })
-    
 
-  })
-
-  const data_i = () => {
-    alert('je fonctionne')
-    const data = document.querySelector('#data')
-    return JSON.parse(data.value)
-  }
+  
 
 }
 
-initial_data()
+setTimeout(()=>{
+  initial_data()
+}, 2000)
