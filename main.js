@@ -15,8 +15,8 @@ const app = document.querySelector('#app')
 const initial_data = () => {
 
   const data_i = () => {
-    alert('je fonctionne')
     const data = document.querySelector('#data')
+    alert(data.innerText)
     return JSON.parse(data.innerText)
   }
 
