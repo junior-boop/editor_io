@@ -12,14 +12,12 @@ import Link from './link/link.mjs'
 
 const app = document.querySelector('#app')
 
-
-
 const initial_data = () => {
 
   const data_i = () => {
     alert('je fonctionne')
     const data = document.querySelector('#data')
-    return JSON.parse(data.value)
+    return JSON.parse(data.innerText)
   }
 
     const editorjs = new Editor({
@@ -64,4 +62,4 @@ const initial_data = () => {
 
 setTimeout(()=>{
   initial_data()
-}, 2000)
+}, 500)
