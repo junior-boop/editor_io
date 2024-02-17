@@ -60,7 +60,7 @@ const initial_data = () => {
   const data_i = () => {
     alert('je fonctionne')
     const data = document.querySelector('#data')
-    return JSON.parse(data)
+    return JSON.parse(data.value)
   }
 
 }
