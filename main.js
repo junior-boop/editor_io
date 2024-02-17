@@ -8,6 +8,7 @@ import marker from './marker/marker.mjs'
 import delimiter from './delimiter/delimiter.mjs'
 import underline  from '@editorjs/underline'
 import image from './image/image.mjs'
+import Link from './link/link.mjs'
 
 const app = document.querySelector('#app')
 
@@ -34,10 +35,12 @@ const editorjs = new Editor({
         defaultLevel: 3
       }
     },
+    image : image,
     marker : marker,
     delimiter : delimiter,
     underline : underline, 
-    image : image
+    
+    
   },
 
 
