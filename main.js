@@ -12,6 +12,13 @@ import Link from './link/link.mjs'
 
 const app = document.querySelector('#app')
 
+window.onload = (event) => {
+  if (window.ReactNativeWebView.injectedObjectJson()) {
+      const customValue = JSON.parse(window.ReactNativeWebView.injectedObjectJson());
+      alert(customValue)
+  }
+}
+
 const initial_data = () => {
   const data = document.querySelector('#data')
 
