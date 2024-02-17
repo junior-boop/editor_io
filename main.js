@@ -15,10 +15,9 @@ const app = document.querySelector('#app')
 
 
 const initial_data = () => {
-  const data = document.querySelector('#data')
   
   window.addEventListener('load', () => {
-    alert('je fonctionne')
+    const data = document.querySelector('#data')
     const editorjs = new Editor({
       placeholder : 'Entrer votre texte',
       holder : app,
