@@ -16,7 +16,6 @@ const initial_data = () => {
 
   const data_i = () => {
     const data = document.querySelector('#data')
-    alert(data.innerText)
     return JSON.parse(data.innerText)
   }
 
