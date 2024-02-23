@@ -16,17 +16,16 @@ const initial_data = () => {
 
   const data_i = () => {
     const data = document.querySelector('#data')
-    alert(data.innerText)
     return JSON.parse(data.innerText)
   }
 
     const editorjs = new Editor({
-      placeholder : 'Entrer votre texte',
       holder : app,
+      
       tools : {
         bible_ref : {
-          class : bible_ref,
-          inlineToolbar: ['link', 'marker', 'bold', 'italic'],
+          class : bible_ref, 
+          inlineToolbar : true
         },
         titre : titre,
         quote_review : quote_review ,
@@ -34,7 +33,7 @@ const initial_data = () => {
         heading : {
           class : heading,
           config : {
-            placeholder: 'Enter a header',
+            placeholder: 'Entrez votre sous-titre',
             levels: [2, 3],
             defaultLevel: 3
           }
@@ -42,12 +41,10 @@ const initial_data = () => {
         link : Link,
         marker : marker,
         delimiter : delimiter,
-        underline : underline, 
-        
-        
+        underline : underline
       },
     
-    
+      
       onChange: async (api, event) => {
         const output = document.getElementById('output');
         output.innerHTML = JSON.stringify(await api.saver.save())
@@ -55,8 +52,6 @@ const initial_data = () => {
     
       data : data_i()
     })
-
-  
 
 }
 
