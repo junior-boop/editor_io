@@ -21,7 +21,7 @@ const initial_data = () => {
 
     const editorjs = new Editor({
       holder : app,
-      
+      placeholder : 'votre texte',
       tools : {
         bible_ref : {
           class : bible_ref, 
