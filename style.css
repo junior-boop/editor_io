@@ -9,7 +9,7 @@
 .block-image{width:100%;margin-bottom:24px}.ce-input{display:block;position:relative;height:48px;width:100%;border:1px solid #e0f2fe;border-radius:4px}.ce-input:after{content:"Enregistrez votre image";position:absolute;top:0;left:0;width:100%;height:100%;background:#f0f9ff;display:flex;align-items:center;justify-content:center;color:#0284c7;font-weight:600;z-index:2}.ce-input:before{content:"Votre image doit \eatre en dessous de -500k";position:absolute;bottom:var(--bottom, 1);opacity:var(--opacity, 0);left:0px;width:99.8%;border-radius:4px;height:100%;background:#ff0050;color:#fff;z-index:3;transition:opacity .3s ease-in-out;display:flex;justify-content:center;align-items:center;font-weight:600}.ce-image{width:100%;max-height:95vw;object-fit:cover;object-position:center;border-radius:8px}
 .block-link{width:85%;margin:24px auto 32px;border:1px solid silver;border-radius:4px}.ce-link-content{display:flex}.ce-link-content input{flex:1;height:42px;outline:none;font-size:18px;padding:12px;border:none}.ce-link-content button{border:none;padding:12px;background-color:#fff;font-weight:800;color:red}.ce-link-content-2 .ce-link-img{width:100%;aspect-ratio:19/9;object-fit:cover;object-position:center}.ce-link-content-2 .content{display:flex;min-height:52px;padding:16px;gap:16px}.ce-link-content-2 .content .ce-link-left{flex:1}.ce-link-content-2 .content .ce-link-right{height:100px;aspect-ratio:1}.ce-link-content-2 .content .ce-link-titre{font-size:24px;font-weight:700}.ce-link-content-2 .content .ce-link-sitename{font-size:16px;font-weight:700;color:#0008}.ce-link-content-2 .content .ce-link-domaine{font-size:16px;color:#0008}@media (max-width : 650px){.block-link{width:100%}.ce-link-content-2 .content .ce-link-titre{font-size:20px}.ce-link-content-2 .content .ce-link-sitename{font-size:14px}.ce-link-content-2 .content .ce-link-right{height:70px;aspect-ratio:1}}
    :root{
-    --radius : 2px !important
+    --radius : 2px !important;
    }
   
   body {
@@ -98,6 +98,11 @@
     }
     .ce-popover {
       border-radius: var(--radius);
+      min-width: 100% !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+
     } 
     .ce-popover-item__icon {
       border-radius: var(--radius);
@@ -108,7 +113,9 @@
     .ce-toolbar__settings-btn {
       border-radius: var(--radius);
     }
-  
+    .ce-popover__items{
+      padding: 12px !important;
+    }
     .cdx-block.cdx-list {
       padding: 0 0;
       padding-left: 40px;
