@@ -9,6 +9,7 @@ import delimiter from './delimiter/delimiter.mjs'
 import underline  from '@editorjs/underline'
 import image from './image/image.mjs'
 import Link from './link/link.mjs'
+import List from './list/list.mjs'
 
 const app = document.querySelector('#app')
 
@@ -29,6 +30,7 @@ const initial_data = () => {
         },
         titre : titre,
         quote_review : quote_review ,
+        list : List,
         image : image,
         heading : {
           class : heading,
