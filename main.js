@@ -30,10 +30,14 @@ const initial_data = () => {
         },
         titre : titre,
         quote_review : quote_review ,
-        list : List,
+        list : {
+          class : List,
+          inlineToolbar : true
+        },
         image : image,
         heading : {
           class : heading,
+          inlineToolbar : true,
           config : {
             placeholder: 'Entrez votre sous-titre',
             levels: [2, 3],
