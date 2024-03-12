@@ -79,6 +79,9 @@
   #editor {
     padding-top: 12px;
   }
+  .ce-block b {
+    font-weight: 600;
+}
   .cdx-marker {
     background-color: #f8e6069c !important;
   }
