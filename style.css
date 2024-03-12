@@ -91,6 +91,12 @@
     font-size: 18px;
   }
 
+  .cdx-list {
+    margin: 0;
+    padding-left: 25px !important;
+    outline: none;
+  }
+
   @media (max-width : 650px) {
     #textarea {
       width: 100%;
