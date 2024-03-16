@@ -10,6 +10,8 @@ import underline  from '@editorjs/underline'
 import image from './image/image.mjs'
 import Link from './link/link.mjs'
 import List from './list/list.mjs'
+import Note from './note/note.mjs'
+
 
 const app = document.querySelector('#app')
 
@@ -29,7 +31,11 @@ const initial_data = () => {
           inlineToolbar : true
         },
         titre : titre,
-        quote_review : quote_review ,
+        quote_review : quote_review,
+        note : {
+          class : Note,
+          inlineToolbar : true
+        },
         list : {
           class : List,
           inlineToolbar : true
